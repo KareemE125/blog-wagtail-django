@@ -5,3 +5,25 @@
     border-radius: 5px;
     box-shadow: 0 0 5px #2017ce;
 }
+
+.gallery{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.gallery div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    gap: 10px;
+    text-align: center;
+    padding: 18px 8px;
+}
+
+
+.gallery div span{
+    font-size: small;
+}

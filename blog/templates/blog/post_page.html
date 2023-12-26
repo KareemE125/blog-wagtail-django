@@ -1,6 +1,6 @@
 {% extends "base.html" %} 
 {% load static %} 
-{% load wagtailcore_tags %} 
+{% load wagtailcore_tags wagtailimages_tags %} 
 
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
@@ -13,6 +13,16 @@
     <br>
     {{ page.body|richtext }}
     <br><br><hr><br>
+    <h3>Gallery:</h3>
+    <section class="gallery">
+        {% for item in page.gallery_images.all %}
+            <div>
+                {% image item.image width-280 %}
+                <span>{{ item.caption }}</span> 
+            </div>
+        {% endfor %}
+    </section>
+    <br><hr><br>
     <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
 
 {% endblock %}

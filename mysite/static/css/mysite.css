@@ -8,6 +8,7 @@ body{
     background-color: #222222;
     color: #f1f1f1;
     padding: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main{
@@ -23,3 +24,35 @@ p{
     margin-bottom: 8px;
 }
 
+
+
+
+
+
+/* Modern scroll bar style */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555555; 
+    border-radius: 99px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d2d2d2;
+    border-radius: 99px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #adadad; 
+}
+  
+  
+  
