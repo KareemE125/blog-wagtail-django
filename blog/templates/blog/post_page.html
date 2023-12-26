@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load wagtailcore_tags %} 
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+
+    <h1>{{ page.title }}</h1>
+    <hr> <br>
+    <p>{{ page.date }}</p>
+    <br>
+    <h2>{{ page.intro }}</h2>
+    <br>
+    {{ page.body|richtext }}
+    <br><br><hr><br>
+    <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
+
+{% endblock %}
