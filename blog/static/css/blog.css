@@ -6,6 +6,11 @@
     box-shadow: 0 0 5px #2017ce;
 }
 
+.img-container{
+    width: 100%;
+    text-align: center;
+}
+
 .gallery{
     display: flex;
     justify-content: start;
@@ -27,5 +32,6 @@
 .gallery div span{
     font-size: small;
 }
+
 
 

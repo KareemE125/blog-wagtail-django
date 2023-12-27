@@ -1,6 +1,6 @@
 {% extends "base.html" %} 
 {% load static %} 
-{% load wagtailcore_tags %} 
+{% load wagtailcore_tags wagtailimages_tags %} 
 
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
@@ -13,10 +13,17 @@
         <br>
         <h2>Posts:</h2>
         {% for post in posts %}
-            <div class="post-card">
-                <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
-                <p>{{ post.specific.date }}</p>
-                <p>{{ post.specific.intro }}</p>
+        <div class="post-card">
+            <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
+                {% with post=post.specific %}
+                    <p>{{ post.date }}</p>
+                    <p>{{ post.intro }}</p>
+                    {% if post.main_image %}
+                    <div class="img-container">
+                        {% image post.main_image width-300 %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
             </div>
         {% endfor %} 
     </section>
