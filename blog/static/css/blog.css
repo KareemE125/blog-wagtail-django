@@ -11,6 +11,27 @@
     text-align: center;
 }
 
+.authors{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.authors li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.authors img{
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+}
+
 .gallery{
     display: flex;
     justify-content: start;
